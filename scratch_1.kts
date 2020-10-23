@@ -5,6 +5,7 @@ var cal= readLine()!!.toDouble()
 var calRound=round(cal).toInt()
 if ( (calRound>=0) and (calRound<6) ){
     println("El alumno se chingo")
+
 }
 else if( (calRound>=6) and (calRound<=9) ){
     println("El alumno ya chingo")
