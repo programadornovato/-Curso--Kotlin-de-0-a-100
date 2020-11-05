@@ -7,15 +7,24 @@ for (i in (0 until cantidad)){
     listaNumeros[i]=listaNumerosTexto[i].toInt()
 }
 var tem=0
+var cont=0
+var bandera=true
 for(i in (0 until cantidad-1)){
+    if(bandera==false){
+        break
+    }
+    bandera=false
     for(j in (0 until cantidad-1)){
         if(listaNumeros[j]>listaNumeros[j+1]){
+            bandera=true
             tem=listaNumeros[j]
             listaNumeros[j]=listaNumeros[j+1]
             listaNumeros[j+1]=tem
         }
     }
+    cont++
 }
+println("Dio $cont vueltas ")
 println("Humano aqui estan tus pinches numero ordenado de forma acendente")
 for (i in (0 until cantidad)){
     println(listaNumeros[i])
